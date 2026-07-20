@@ -2,81 +2,93 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    --font1:  Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
 }
 
-body {
-    background-color: white;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font1);
 }
 
 header {
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
 }
 
 header > h1 {
-    font-size: 3em;
-    font-family: 'Passion One';
+    font-family: var(--font2);
+    font-variant: small-caps;
+    font-size: 4em;
 }
 
-header > p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 section {
-    margin: 80px 0px;
-    padding-left: 20px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--font3);
+    font-size: 2em;
 }
 
-main p {
-    display: block;
-    font-size: 2.5em;
-    font-family: 'sriracha';
+section > p {
+    padding-bottom: 2em;
 }
 
-section.parallax {
-    display: block;
-    background-position: right center;
-    background-attachment: fixed;
-    height: 800px;
+section.normal {
+    background-color: white;
+    color: black;
 }
 
-#img1 {
-    background-image: url(imagens/imagens/background001.jpg);
-}
-
-#img2 {
-    background-image: url(imagens/imagens/background002.jpg);
-}
-article {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.45);
-    margin-top: 150px;
+section.imagem {
+    background-color: rgb(51, 51, 51);
     color: white;
-    padding: 0px;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-footer p {
-    font-family: Arial, Helvetica, sans-serif;
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    
+}
+
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+
+}
+
+footer {
     background-color: black;
     color: lightgray;
-    font-size: 1em;
     text-align: center;
     padding: 10px;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
